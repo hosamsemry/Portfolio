@@ -1,0 +1,27 @@
+{% comment %} {% extends "base.html" %}
+{% load static %}
+
+{% block content1 %}
+<div class="row my-5">
+    <div class="col-6 text-center text-light">
+        <h1 class="mt-5">Stay Connected</h1>
+        
+        <!-- Email -->
+        <h3 class="mt-5">semryhosam@gmail.com</h3>
+
+        <!-- Social Links -->
+        <div class="d-flex justify-content-center align-items-center mt-4">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/hosam-semry-158032265" target="_blank" class="ms-3">
+                <img src="{% static 'images/linkedin.jpg' %}" alt="LinkedIn" width="50" height="50" class="social_links">
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/yourgithubusername" target="_blank" class="ms-3">
+                <img src="{% static 'images/github.jpg' %}" alt="GitHub" width="50" height="50" class="social_links">
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock content1 %}
+ {% endcomment %}
