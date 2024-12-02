@@ -1,0 +1,192 @@
+body {
+  background-color: rgb(20, 0, 30);
+}
+
+.navbar-nav .nav-link:hover {
+  font-weight: bold;
+  color: #4fffb0;
+}
+
+.navbar-nav .nav-link {
+  font-size: 20px;
+}
+
+.navbar-brand {
+  font-size: 25px;
+}
+
+.navbar-dark {
+  background-color: rgb(18, 1, 46);
+}
+
+.circular-image-container {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circular-image {
+  width: 120%;
+  height: auto;
+  display: block;
+}
+
+.name {
+  color: #fff;
+}
+
+.title {
+  color: #fff;
+}
+
+.social_links {
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid #4fffb0; /* Brighter border color for social links */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social_links:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  border-color: #e3f337; /* Change border color on hover */
+}
+
+.about_image {
+  width: 200px;
+  height: auto;
+  display: block;
+}
+
+.jumbtron {
+  background-color: #002244;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.display4 {
+  color: #eef3f8;
+  font-size: 24px;
+}
+
+.lead {
+  font-size: 18px;
+  color: #28a745;
+}
+
+/* Removed form-container styling */
+
+/* Skill images */
+.skill-image {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin: 0 10px;
+}
+
+.my-skills-heading {
+  margin-bottom: 50px;
+}
+
+.project-card {
+  background-color: rgb(18, 1, 46); /* Dark background for project cards */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Project name */
+.project-card h4 {
+  color: #e3f337; /* Bright color for project name */
+}
+
+/* Labels like GitHub, Description */
+.project-card p strong {
+  color: #e3f337; /* Bright color for labels */
+}
+
+/* GitHub link */
+.project-card a {
+  color: #37f385; /* Bright color for GitHub link */
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* Description text */
+.description {
+  color: #eef3f8; /* Light color for the description text */
+}
+
+.project-card p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Updated Styles for Contact Page */
+
+/* Main container styling */
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+/* Email & Social Media Section */
+.contact-details {
+  text-align: center;
+  color: #fff;
+}
+
+.contact-details h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #4fffb0;
+}
+
+.contact-details h3 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #e3f337;
+}
+
+.contact-details a {
+  margin: 0 10px;
+}
+
+.contact-details a img {
+  transition: transform 0.3s ease;
+}
+
+.contact-details a:hover img {
+  transform: scale(1.2);
+}
+
+/* Button Styling */
+.contact-button {
+  background-color: #37f385;
+  color: #1a1a1a;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border: none;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.contact-button:hover {
+  background-color: #4fffb0;
+  color: #fff;
+}

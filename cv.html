@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content1 %}
+<div class="container my-5 text-center">
+  <h2 class="text-light">My Resume</h2>
+  
+  <!-- CV Image -->
+  <div class="my-4">
+    <img src="static/images/software.PNG" alt="My CV Photo" class="img-fluid" style="max-width: 500px;">
+  </div>
+  
+  <!-- Download Button -->
+  <a href="{% static 'myapp/Hosam-Semry-software-Engineer.pdf' %}" class="btn btn-primary btn-lg" download>
+    Download CV
+  </a>
+</div>
+{% endblock %}
+

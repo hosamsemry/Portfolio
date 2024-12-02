@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content1 %}
+<div class="container my-5">
+  <h1 class="text-center mb-4" style="color: #4fffb0;">My Projects</h1>
+
+  {% for project in projects %}
+  <div class="project-card">
+    <h4><strong>Project Name:</strong> <span class="text-light">{{ project.name }}</span></h4>
+    <h4><strong>GitHub:</strong> <a href="{{ project.github }}" class="github" target="_blank">{{ project.github }}</a></h4>
+    <h4><strong>Description:</strong> <span class="description">{{ project.description }}</span></h4>
+  </div>
+  <hr>
+  {% endfor %}
+
+</div>
+{% endblock content1 %}
+
