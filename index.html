@@ -9,7 +9,7 @@
         :root {
             --primary: linear-gradient(135deg,rgb(25, 135, 84),rgb(20, 43, 77)) ;
             --secondary: #3498db;
-            --accent: #1abc9c;
+            --accent:rgb(62, 128, 114);
             --light: #ecf0f1;
             --dark: #2c3e50;
             --text: #333;
@@ -45,7 +45,7 @@
         }
         
         h1 {
-            font-size: 2.5rem;
+            font-size: 1rem;
         }
         
         h2 {
@@ -71,7 +71,7 @@
         .btn {
             display: inline-block;
             padding: 0.8rem 1.5rem;
-            background-color: var(--secondary);
+            background-color: var(--accent);
             color: white;
             text-decoration: none;
             border-radius: 4px;
@@ -80,7 +80,18 @@
             margin-top: 1rem;
         }
         
-        .btn:hover {
+        .btn-contact {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--secondary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+        .btn:hover, .btn-contact:hover {
             background-color: #2980b9;
             transform: translateY(-2px);
             box-shadow: var(--shadow);
@@ -102,6 +113,10 @@
             justify-content: space-between;
             align-items: center;
             padding: 1.5rem 0;
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+
         }
         
         .logo {
@@ -434,32 +449,63 @@
         }
         
         /* Contact Section */
-        .contact {
-            background-color: var(--light);
-            padding: 5rem 2rem;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            align-items: start;
-        }
-        
-        .contact-info {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-        
-        .contact-info i {
-            color: var(--accent);
-            margin-right: 0.5rem;
-        }
-        .contact a {
-            text-decoration:none;
-        }
+.contact {
+  background-color: var(--light);
+  padding: 5rem 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.contact-info {
+  font-size: 1.2rem;
+  line-height: 2;
+  color: var(--text);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-info p {
+  margin: 1rem 0;
+}
+
+.contact-info i {
+  color: var(--accent);
+  margin-right: 0.5rem;
+  font-size: 1.3rem;
+  vertical-align: middle;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
         
         /* Footer */
         footer {
@@ -517,7 +563,16 @@
         
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 1.8rem;
+                font-weight: bold;
+            }
+            .hero img {
+                width: 250px;
+                height: 180px;
+            }
+            .hero .btn, .btn-contact {
+                text-align: center;
+                width: 100%;
             }
             
             .nav-links {
@@ -786,11 +841,6 @@
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
             </nav>
         </div>
     </header>
@@ -805,7 +855,7 @@
                     <p>Backend Developer with expertise in building robust and scalable server-side applications</p>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn">View Projects</a>
-                        <a href="#contact" class="btn">Contact Me</a>
+                        <a href="#contact" class="btn-contact">Contact Me</a>
                     </div>
                 </div>
             </div>
@@ -983,14 +1033,15 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:semryhosam@gmail.com">semryhosam@gmail.com</a></p>
-                <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/hosam-semry" target="_blank">linkedin.com/in/hosam-semry</a></p>
-                <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/hosamsemry" target="_blank">github.com/hosamsemry</a></p>
-            </div>
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:semryhosam@gmail.com">semryhosam@gmail.com</a></p>
+            <p><i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hosam-semry" target="_blank">linkedin.com/in/hosam-semry</a></p>
+            <p><i class="fab fa-github"></i> <strong>GitHub:</strong> <a href="https://github.com/hosamsemry" target="_blank">github.com/hosamsemry</a></p>
+          </div>
         </div>
-    </section>
+      </section>
+      
 
     <!-- Footer -->
     <footer>
@@ -1089,66 +1140,7 @@
             statsObserver.observe(number);
         });
 
-        // Theme toggler - light/dark mode
-        function setupThemeToggle() {
-            // Create the toggle button
-            const toggleBtn = document.createElement('button');
-            toggleBtn.innerHTML = '🌙';
-            toggleBtn.classList.add('theme-toggle');
-            toggleBtn.style.position = 'fixed';
-            toggleBtn.style.bottom = '20px';
-            toggleBtn.style.right = '20px';
-            toggleBtn.style.zIndex = '1000';
-            toggleBtn.style.background = 'var(--accent)';
-            toggleBtn.style.color = 'white';
-            toggleBtn.style.border = 'none';
-            toggleBtn.style.borderRadius = '50%';
-            toggleBtn.style.width = '50px';
-            toggleBtn.style.height = '50px';
-            toggleBtn.style.fontSize = '1.5rem';
-            toggleBtn.style.cursor = 'pointer';
-            toggleBtn.style.boxShadow = 'var(--shadow)';
-            toggleBtn.style.transition = 'all 0.3s ease';
-            
-            document.body.appendChild(toggleBtn);
-            
-            // Check for saved theme preference
-            const currentTheme = localStorage.getItem('theme') || 'light';
-            if (currentTheme === 'dark') {
-                document.documentElement.style.setProperty('--primary', '#1a1a2e');
-                document.documentElement.style.setProperty('--secondary', '#4361ee');
-                document.documentElement.style.setProperty('--accent', '#3a86ff');
-                document.documentElement.style.setProperty('--light', '#121212');
-                document.documentElement.style.setProperty('--dark', '#f8f9fa');
-                document.documentElement.style.setProperty('--text', '#e1e1e1');
-                toggleBtn.innerHTML = '☀️';
-            }
-            
-            // Toggle theme function
-            toggleBtn.addEventListener('click', function() {
-                if (localStorage.getItem('theme') === 'dark') {
-                    // Switch to light theme
-                    document.documentElement.style.setProperty('--primary', '#2d3e50');
-                    document.documentElement.style.setProperty('--secondary', '#3498db');
-                    document.documentElement.style.setProperty('--accent', '#1abc9c');
-                    document.documentElement.style.setProperty('--light', '#ecf0f1');
-                    document.documentElement.style.setProperty('--dark', '#2c3e50');
-                    document.documentElement.style.setProperty('--text', '#333');
-                    localStorage.setItem('theme', 'light');
-                    toggleBtn.innerHTML = '🌙';
-                } else {
-                    // Switch to dark theme
-                    document.documentElement.style.setProperty('--primary', '#1a1a2e');
-                    document.documentElement.style.setProperty('--secondary', '#4361ee');
-                    document.documentElement.style.setProperty('--accent', '#3a86ff');
-                    document.documentElement.style.setProperty('--light', '#121212');
-                    document.documentElement.style.setProperty('--dark', '#f8f9fa');
-                    document.documentElement.style.setProperty('--text', '#e1e1e1');
-                    localStorage.setItem('theme', 'dark');
-                    toggleBtn.innerHTML = '☀️';
-                }
-            });
-        }
+        
         const cvDownloadBtn = document.querySelector('.cv-download');
         if (cvDownloadBtn) {
             cvDownloadBtn.addEventListener('click', function() {
@@ -1162,8 +1154,7 @@
             });
         }
         
-        // Initialize theme toggle
-        setupThemeToggle();
+        
     </script>
 </body>
 </html>
