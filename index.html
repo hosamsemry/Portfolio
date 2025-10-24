@@ -302,6 +302,7 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            margin-right: 15px;
         }
 
         .skill-card::before {
@@ -318,6 +319,7 @@
 
         .skill-card:hover::before {
             transform: translateX(0);
+            
         }
 
         .skill-card:hover {
@@ -391,6 +393,32 @@
 
         .project-content {
             padding: 2rem;
+        }
+        .project-card {
+            border-radius: 20px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            flex: 1 1 auto;
+        }
+
+        .project-content .project-link {
+            margin-top: auto;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
         }
 
         .project-title {
@@ -755,7 +783,6 @@
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">
                             <span>View Projects</span>
-                            <span>→</span>
                         </a>
                         <a href="#contact" class="btn btn-secondary">
                             <span>Get In Touch</span>
@@ -805,12 +832,12 @@
                 <div class="skill-card fade-in-up">
                     <div class="skill-icon">⚡</div>
                     <h3>Backend Development</h3>
-                    <p>Django, Flask, Node.js, Express.js, REST APIs</p>
+                    <p style="line-height: 23px;">Django, Flask, Node.js, Express.js, REST APIs</p>
                 </div>
                 <div class="skill-card fade-in-up">
                     <div class="skill-icon">🎨</div>
                     <h3>Frontend Development</h3>
-                    <p>React, Redux, JavaScript, TypeScript, Bootstrap</p>
+                    <p style="line-height: 23px;">React, Next.js, Redux, JavaScript, TypeScript, Bootstrap, Tailwind</p>
                 </div>
                 <div class="skill-card fade-in-up">
                     <div class="skill-icon">💾</div>
@@ -824,8 +851,8 @@
                 </div>
                 <div class="skill-card fade-in-up">
                     <div class="skill-icon">🛠️</div>
-                    <h3>DevOps & Tools</h3>
-                    <p>Docker, Git, CI/CD, Cloud Deployment</p>
+                    <h3>Tools</h3>
+                    <p>Docker, Git, Celery, Postman</p>
                 </div>
                 <div class="skill-card fade-in-up">
                     <div class="skill-icon">🚀</div>
@@ -844,16 +871,19 @@
                     <span class="terminal-prompt">$</span> hosam --list-skills
                 </div>
                 <div class="terminal-output">
-                    → Languages: Python, JavaScript, TypeScript
+                    <span style="color: #14b8a6;margin-right: 5px;">→ Languages:</span> Python, JavaScript, TypeScript
                 </div>
                 <div class="terminal-output">
-                    → Frameworks: Django, Flask, React, Express.js
+                    <span style="color: #14b8a6;margin-right: 5px;">→ Frameworks:</span> Django, Flask, Express.js, React, Next.js, Bootstrap, Tailwind
                 </div>
                 <div class="terminal-output">
-                    → Databases: PostgreSQL, MySQL, MongoDB, Redis
+                    <span style="color: #14b8a6;margin-right: 5px;">→ Databases:</span> PostgreSQL, MySQL, MongoDB, Redis
                 </div>
                 <div class="terminal-output">
-                    → Tools: Docker, Git, Celery, JWT
+                    <span style="color: #14b8a6;margin-right: 5px;">→ Tools / Technologies:</span> Docker, Git, Postman, Celery, JWT, OAuth, Djoser, Redux
+                </div>
+                <div class="terminal-output">
+                    <span style="color: #14b8a6;margin-right: 5px;">→ Concepts:</span> OOP, Solid Principles, RESTful APIs, MVC Architecture, Responsive Design
                 </div>
             </div>
         </div>
@@ -881,7 +911,7 @@
                         <p class="project-description">
                             Built with Django and DRF, supporting multiple stores with isolated users, products, and orders. Integrated Paymob payments, Celery tasks, and scalable modular architecture.
                         </p>
-                        <a href="https://github.com/hosamsemry/E-commerce" target="_blank" class="project-link">View Project →</a>
+                        <a href="https://github.com/hosamsemry/E-commerce" target="_blank" class="project-link">View Code</a>
                     </div>
                 </div>
                 
@@ -899,14 +929,14 @@
                         <p class="project-description">
                             A full-featured crowdfunding platform connecting donors with impactful campaigns. Features user authentication, campaign creation, donation tracking, and administrative controls with a responsive interface.
                         </p>
-                        <a href="https://github.com/CIHYALACE/Optimal_Donor" target="_blank" class="project-link">View Project →</a>
+                        <a href="https://github.com/CIHYALACE/Optimal_Donor" target="_blank" class="project-link">View Code</a>
                     </div>
                 </div>
 
                 <div class="project-card fade-in-up">
                     <div class="project-content">
                         <h3 class="project-title">Ask.hs</h3>
-                        <a href="https://ask-hs.onrender.com/" target="_blank" class="project-link" style="display: block; margin-bottom: 1rem;">Live Demo →</a>
+                        <a href="https://ask-hs.onrender.com/" target="_blank" class="project-link" style="display: block; margin-bottom: 1rem;">Live Demo</a>
                         <div class="project-tags">
                             <span class="tag">Django</span>
                             <span class="tag">Channels</span>
@@ -918,13 +948,15 @@
                         <p class="project-description">
                             Real-time Q&A platform built with Django Channels and WebSockets. Features live messaging, user authentication, and responsive design for seamless communication.
                         </p>
-                        <a href="https://github.com/hosamsemry/Ask.hs/" target="_blank" class="project-link">View Code →</a>
+                        <a href="https://github.com/hosamsemry/Ask.hs/" target="_blank" class="project-link">View Code</a>
                     </div>
                 </div>
 
                 <div class="project-card fade-in-up">
                     <div class="project-content">
                         <h3 class="project-title">Webify</h3>
+                        <a href="https://webify-react-277c68dec1b7.herokuapp.com" target="_blank" class="project-link" style="display: block; margin-bottom: 1rem;">Live Demo </a>
+
                         <div class="project-tags">
                             <span class="tag">Django</span>
                             <span class="tag">React</span>
@@ -936,7 +968,7 @@
                         <p class="project-description">
                             Full-stack multi-vendor e-commerce platform with JWT & Google OAuth authentication, comprehensive dashboards, and an AI-powered chatbot for enhanced user experience.
                         </p>
-                        <a href="https://github.com/FatmaMahmoudElraey/ITI_Grad_Project" target="_blank" class="project-link">View Project →</a>
+                        <a href="https://github.com/FatmaMahmoudElraey/ITI_Grad_Project" target="_blank" class="project-link">View Code</a>
                     </div>
                 </div>
             </div>
