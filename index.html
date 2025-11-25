@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hosam Semry - Full Stack Developer</title>
+    <!-- FontAwesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-papmQXqXj3gA7n8iH0vV3vVZy5bHk1wVt6l7uA9y8i3qPjQvKpZ5n2Q5w5pZ5n2Q5w5pZ5n2Q5w5pZ5n2Q5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- VanillaTilt.js for tilt effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.3/vanilla-tilt.min.js"></script>
+    <!-- TypewriterJS for typewriter effect -->
+    <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.18.0/dist/core.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosam Semry - Full Stack Developer</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
         
@@ -28,6 +37,7 @@
         }
 
         body {
+    scroll-behavior: smooth;
             font-family: 'Inter', sans-serif;
             background: var(--dark);
             color: var(--white);
@@ -755,6 +765,11 @@
         <div class="container">
             <nav>
                 <div class="logo">Hosam.dev</div>
+                <div class="social-icons" style="display: flex; gap: 1rem; align-items: center;">
+                    <a href="https://github.com/hosamsemry" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
+                    <a href="https://linkedin.com/in/hosamsemry" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+                    <a href="mailto:hosamsemry@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope fa-lg"></i></a>
+                </div>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -774,10 +789,14 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <!-- Floating SVG shapes -->
+        <svg class="floating-shape" style="position:absolute; top:10%; left:5%; z-index:0;" width="80" height="80" viewBox="0 0 80 80"><circle cx="40" cy="40" r="40" fill="#6366f1" fill-opacity="0.12"><animate attributeName="cy" values="40;60;40" dur="6s" repeatCount="indefinite"/></circle></svg>
+        <svg class="floating-shape" style="position:absolute; bottom:10%; right:8%; z-index:0;" width="60" height="60" viewBox="0 0 60 60"><rect x="10" y="10" width="40" height="40" rx="10" fill="#14b8a6" fill-opacity="0.13"><animate attributeName="x" values="10;20;10" dur="8s" repeatCount="indefinite"/></rect></svg>
+        <svg class="floating-shape" style="position:absolute; top:30%; right:15%; z-index:0;" width="50" height="50" viewBox="0 0 50 50"><polygon points="25,0 50,50 0,50" fill="#fff" fill-opacity="0.05"><animate attributeName="points" values="25,0 50,50 0,50; 25,10 45,45 5,45; 25,0 50,50 0,50" dur="7s" repeatCount="indefinite"/></polygon></svg>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <div class="subtitle">Full Stack Developer</div>
+                    <div class="subtitle" id="typewriter-subtitle"></div>
                     <h1>Hosam Semry</h1>
                     <p>Full-Stack Developer with expertise in building robust and scalable server-side applications</p>
                     <div class="hero-buttons">
@@ -791,11 +810,13 @@
                 </div>
                 <div class="hero-image-container">
                     <div class="hero-image-bg"></div>
-                    <img src="./me.jpeg" alt="Hosam Semry" class="hero-image">
+                    <img src="./me.jpeg" alt="Hosam Semry" class="hero-image" id="heroImage">
                 </div>
             </div>
         </div>
     </section>
+    <!-- SVG Wave Separator -->
+    <svg viewBox="0 0 1440 100" style="display:block; width:100%; height:80px; margin-bottom:-2px;" xmlns="http://www.w3.org/2000/svg"><path fill="#1e293b" fill-opacity="1" d="M0,64L48,53.3C96,43,192,21,288,32C384,43,480,85,576,85.3C672,85,768,43,864,42.7C960,43,1056,85,1152,101.3C1248,117,1344,107,1392,101.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
 
     <!-- About Section -->
     <section id="about">
@@ -896,6 +917,46 @@
             <p class="section-subtitle fade-in-up">Some of my recent work</p>
             
             <div class="projects-grid">
+
+                <div class="project-card fade-in-up">
+                    <div class="project-content">
+                        <h3 class="project-title">Webify</h3>
+                        <a href="https://webify-react-277c68dec1b7.herokuapp.com" target="_blank" class="project-link" style="display: block; margin-bottom: 1rem;">Live Site </a>
+
+                        <div class="project-tags">
+                            <span class="tag">Django</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Redux</span>
+                            <span class="tag">JWT</span>
+                            <span class="tag">Google OAuth</span>
+                            <span class="tag">AI Chatbot</span>
+                        </div>
+                        <p class="project-description">
+                            Full-stack multi-vendor e-commerce platform with JWT & Google OAuth authentication, comprehensive dashboards, and an AI-powered chatbot for enhanced user experience.
+                        </p>
+                        <a href="https://github.com/FatmaMahmoudElraey/ITI_Grad_Project" target="_blank" class="project-link">View Code</a>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in-up">
+                    <div class="project-content">
+                        <h3 class="project-title">Ask.hs</h3>
+                        <a href="https://ask-hs.onrender.com/" target="_blank" class="project-link" style="display: block; margin-bottom: 1rem;">Live Site</a>
+                        <div class="project-tags">
+                            <span class="tag">Django</span>
+                            <span class="tag">Channels</span>
+                            <span class="tag">Redis</span>
+                            <span class="tag">WebSockets</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Bootstrap</span>
+                        </div>
+                        <p class="project-description">
+                            Real-time Q&A platform built with Django Channels and WebSockets. Features live messaging, user authentication, and responsive design for seamless communication.
+                        </p>
+                        <a href="https://github.com/hosamsemry/Ask.hs/" target="_blank" class="project-link">View Code</a>
+                    </div>
+                </div>
+
                 <div class="project-card fade-in-up">
                     <div class="project-content">
                         <h3 class="project-title">Multi-Tenant E-commerce Platform</h3>
@@ -932,45 +993,7 @@
                         <a href="https://github.com/CIHYALACE/Optimal_Donor" target="_blank" class="project-link">View Code</a>
                     </div>
                 </div>
-
-                <div class="project-card fade-in-up">
-                    <div class="project-content">
-                        <h3 class="project-title">Ask.hs</h3>
-                        <a href="https://ask-hs.onrender.com/" target="_blank" class="project-link" style="display: block; margin-bottom: 1rem;">Live Demo</a>
-                        <div class="project-tags">
-                            <span class="tag">Django</span>
-                            <span class="tag">Channels</span>
-                            <span class="tag">Redis</span>
-                            <span class="tag">WebSockets</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">Bootstrap</span>
-                        </div>
-                        <p class="project-description">
-                            Real-time Q&A platform built with Django Channels and WebSockets. Features live messaging, user authentication, and responsive design for seamless communication.
-                        </p>
-                        <a href="https://github.com/hosamsemry/Ask.hs/" target="_blank" class="project-link">View Code</a>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in-up">
-                    <div class="project-content">
-                        <h3 class="project-title">Webify</h3>
-                        <a href="https://webify-react-277c68dec1b7.herokuapp.com" target="_blank" class="project-link" style="display: block; margin-bottom: 1rem;">Live Demo </a>
-
-                        <div class="project-tags">
-                            <span class="tag">Django</span>
-                            <span class="tag">React</span>
-                            <span class="tag">Redux</span>
-                            <span class="tag">JWT</span>
-                            <span class="tag">Google OAuth</span>
-                            <span class="tag">AI Chatbot</span>
-                        </div>
-                        <p class="project-description">
-                            Full-stack multi-vendor e-commerce platform with JWT & Google OAuth authentication, comprehensive dashboards, and an AI-powered chatbot for enhanced user experience.
-                        </p>
-                        <a href="https://github.com/FatmaMahmoudElraey/ITI_Grad_Project" target="_blank" class="project-link">View Code</a>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -984,12 +1007,14 @@
             <div class="timeline">
                 <div class="timeline-item fade-in-up">
                     <div class="timeline-content">
-                        <div class="timeline-date">May 2025 - July 2025</div>
+                        <div class="timeline-date">May 2025 - present</div>
                         <h3 style="color: var(--white); margin-bottom: 0.5rem;">Full Stack Developer</h3>
-                        <h4 style="color: var(--primary); margin-bottom: 1rem;">Freelance</h4>
+                        <a href="https://alalanda.com/" target="_blank" class="project-link" style="display: block; margin-bottom: 1rem;">Live Site</a>
+
                         <p style="color: var(--light-gray); line-height: 1.6;">
-                            Built a multilingual brand showcase website for a client to display their product line. 
-                            Implemented features such as category navigation, brand banners, product pages, and contact form.
+                            • Developed a multilingual brand showcase website for Alalnada to display their product lines.
+                            • Optimized backend performance by implementing in-memory caching in the products page.
+                            • Improved endpoint performance by 83% (4.86 ms to 0.85 ms).
                         </p>
                         <p style="color: var(--accent); margin-top: 1rem;">
                             <strong>Technologies:</strong> Django, django-parler, Bootstrap
@@ -1203,6 +1228,54 @@
             document.body.classList.add('loaded');
         });
     </script>
+<script>
+// Typewriter effect for subtitle
+window.addEventListener('DOMContentLoaded', function() {
+  if (window.Typewriter) {
+    var typewriter = new Typewriter(document.getElementById('typewriter-subtitle'), {
+      loop: true,
+      delay: 55,
+    });
+    typewriter.typeString('Full Stack Developer')
+      .pauseFor(1200)
+      .deleteAll()
+      .typeString('Backend Specialist')
+      .pauseFor(1200)
+      .deleteAll()
+      .typeString('Modern Web Enthusiast')
+      .pauseFor(1200)
+      .deleteAll()
+      .typeString('Open Source Contributor')
+      .pauseFor(1200)
+      .deleteAll()
+      .typeString('Full Stack Developer')
+      .pauseFor(2000)
+      .start();
+  }
+
+  // VanillaTilt for hero image
+  if (window.VanillaTilt) {
+    VanillaTilt.init(document.querySelectorAll("#heroImage"), {
+      max: 18,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.22
+    });
+  }
+
+  // Fade-in sections on scroll
+  const faders = document.querySelectorAll('.fade-in-up, .section-title, .section-subtitle, .project-card, .skill-card, .timeline-content, .contact-card');
+  const appearOptions = { threshold: 0.18, rootMargin: "0px 0px -40px 0px" };
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+  faders.forEach(fader => { appearOnScroll.observe(fader); });
+});
+</script>
 </body>
 </html>
 
