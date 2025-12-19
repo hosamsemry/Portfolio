@@ -164,7 +164,7 @@
         .hero-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 10rem;
             align-items: center;
         }
 
@@ -188,8 +188,8 @@
         }
 
         .hero-text p {
-            font-size: 1.1rem;
-            color: var(--light-gray);
+            font-size: 1.2rem;
+            color: #eeeeee;
             line-height: 1.8;
             margin-bottom: 2rem;
             animation: fadeInUp 0.8s ease 0.4s both;
@@ -216,7 +216,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 120%;
+            width: 100%;
             height: 120%;
             background: var(--gradient);
             border-radius: 30px;
@@ -357,7 +357,7 @@
         }
 
         .skill-card p {
-            color: var(--light-gray);
+            color: #eeeeee;
             font-size: 0.95rem;
         }
 
@@ -460,7 +460,7 @@
         }
 
         .project-description {
-            color: var(--light-gray);
+            color: #eeeeee;
             line-height: 1.6;
             margin: 1.5rem 0;
         }
@@ -798,7 +798,7 @@
                 <div class="hero-text">
                     <div class="subtitle" id="typewriter-subtitle"></div>
                     <h1>Hosam Semry</h1>
-                    <p>Full-Stack Developer with expertise in building robust and scalable server-side applications</p>
+                    <p>(Django, FastAPI, Node.js, React, Next.js)</p>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">
                             <span>View Projects</span>
@@ -822,14 +822,15 @@
     <section id="about">
         <div class="container">
             <h2 class="section-title fade-in-up">About Me</h2>
-            <p class="section-subtitle fade-in-up">Passionate about building the future of web</p>
+            <p class="section-subtitle fade-in-up">Passionate about building meaningful products and impactful projects</p>
             
             <div class="glass" style="padding: 3rem; margin-top: 3rem;">
-                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--light-gray); margin-bottom: 1.5rem;">
-                    Hello! I'm Hosam, a passionate full-stack developer with expertise in developing modern web applications. I specialize in creating seamless user experiences and robust backend architectures.
+                <p style="font-size: 1.1rem; line-height: 1.8; color: white; margin-bottom: 1.5rem;">
+                    With a strong foundation in backend development using Python and hands-on experience
+                    building and deploying full-stack websites. In previous projects, I've developed RESTful APIs using Django REST Framework, Flask, FastApi and Node.js, and worked with both SQL and NoSQL databases (PostgreSQL, MySQL, MongoDB).
                 </p>
-                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--light-gray); margin-bottom: 1.5rem;">
-                    My approach combines clean code principles with practical solutions to business problems. I enjoy working with cutting-edge technologies and turning complex requirements into elegant solutions.
+                <p style="font-size: 1.1rem; line-height: 1.8; color: white; margin-bottom: 1.5rem;">
+                    On the Frontend side, I have practical experience with React, TypeScript, and Next.js, enabling me to build intuitive, responsive interfaces that integrate seamlessly with backend systems.
                 </p>
                 <a href="./assets/Hosam-Semry-Full-stack.pdf" class="cv-download" download>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -853,7 +854,7 @@
                 <div class="skill-card fade-in-up">
                     <div class="skill-icon">⚡</div>
                     <h3>Backend Development</h3>
-                    <p style="line-height: 23px;">Django, Flask, Node.js, Express.js, REST APIs</p>
+                    <p style="line-height: 23px;">Django, FastAPI, Flask, Node.js, Express.js, REST APIs</p>
                 </div>
                 <div class="skill-card fade-in-up">
                     <div class="skill-icon">🎨</div>
@@ -892,10 +893,10 @@
                     <span class="terminal-prompt">$</span> hosam --list-skills
                 </div>
                 <div class="terminal-output">
-                    <span style="color: #14b8a6;margin-right: 5px;">→ Languages:</span> Python, JavaScript, TypeScript
+                    <span style="color: #14b8a6;margin-right: 5px;">→ Languages:</span> Python, JavaScript, TypeScript, Java
                 </div>
                 <div class="terminal-output">
-                    <span style="color: #14b8a6;margin-right: 5px;">→ Frameworks:</span> Django, Flask, Express.js, React, Next.js, Bootstrap, Tailwind
+                    <span style="color: #14b8a6;margin-right: 5px;">→ Frameworks:</span> Django, FastAPI, Flask, Express.js, React, Next.js, Bootstrap, Tailwind
                 </div>
                 <div class="terminal-output">
                     <span style="color: #14b8a6;margin-right: 5px;">→ Databases:</span> PostgreSQL, MySQL, MongoDB, Redis
@@ -1011,9 +1012,14 @@
                         <h3 style="color: var(--white); margin-bottom: 0.5rem;">Full Stack Developer</h3>
                         <a href="https://alalanda.com/" target="_blank" class="project-link" style="display: block; margin-bottom: 1rem;">Live Site</a>
 
-                        <p style="color: var(--light-gray); line-height: 1.6;">
+                        <p style="color: #eeeeee; line-height: 1.6; margin-bottom: 5px;">
                             • Developed a multilingual brand showcase website for Alalnada to display their product lines.
+                        </p>
+                        <p style="color: #eeeeee; line-height: 1.6; margin-bottom: 5px;">
                             • Optimized backend performance by implementing in-memory caching in the products page.
+
+                        </p>
+                        <p style="color: #eeeeee; line-height: 1.6;">
                             • Improved endpoint performance by 83% (4.86 ms to 0.85 ms).
                         </p>
                         <p style="color: var(--accent); margin-top: 1rem;">
@@ -1028,7 +1034,7 @@
                         <div class="timeline-date">November 2024 - April 2025</div>
                         <h3 style="color: var(--white); margin-bottom: 0.5rem;">Full Stack Web Developer</h3>
                         <h4 style="color: var(--primary); margin-bottom: 1rem;">Information Technology Institute</h4>
-                        <p style="color: var(--light-gray); line-height: 1.6;">
+                        <p style="color: #eeeeee; line-height: 1.6;">
                             Completed intensive training program focusing on Python and React development. 
                             Built E-commerce websites and crowdfunding platforms with fellow developers.
                         </p>
